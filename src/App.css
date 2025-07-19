@@ -1,0 +1,112 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #dac7c9;
+}
+
+.first-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-component-container {
+  display: grid;
+  height: 700px;
+  grid-template-rows: 20% 80%;
+  padding: 10px;
+  background-color: #000;
+}
+
+.top-component-container {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.main-display {
+  font-size: 4rem;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-display p {
+  font-size: 2rem;
+  color: #bc2c2c;
+}
+
+.secondary-display {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #ddb905;
+  word-break: break-all;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.bottom-component-container {
+  display: grid;
+  grid-template-rows: repeat(5, 110px);
+  grid-template-columns: repeat(4, 110px);
+  color: #fff;
+  font-size: 3rem;
+}
+
+.bottom-component-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #646161;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+.second-div {
+  background-color: #bc2c2c;
+}
+
+.second-div,
+.seventeen-div {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.sixteen-div {
+  grid-column-start: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  background-color: #0f03b5;
+}
+
+.operators {
+  background-color: #908888;
+}
+
+@media (max-width: 600px) {
+  .main-component-container {
+    flex-direction: column;
+  }
+
+  .top-component-container {
+    align-items: center;
+  }
+
+  .bottom-component-container {
+    grid-template-rows: repeat(4, 80px);
+    grid-template-columns: repeat(4, 80px);
+  }
+
+  .bottom-component-button {
+    font-size: 2rem;
+  }
+}
